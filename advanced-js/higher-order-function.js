@@ -2,7 +2,7 @@
 // These are the functions which either accepts functions asn arguments
 // Or Function which returns a function
 
-// In our cse function is accepting a function 
+// In our case function is accepting a function 
 // SO, here we are telling the function what to do such as passing data to function which will be used
 // by the function and then telling function what to do with that data
 

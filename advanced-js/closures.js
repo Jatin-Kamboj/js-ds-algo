@@ -3,7 +3,7 @@
 // Parent scope directly
 
 // The functions are lexically scope binded 
-// IMPORTANT they will look into the [[SCOPE]] object to find the variables being used in the lower
+// IMPORTANT they (Child scope functions) will look into the [[SCOPE]] object to find the variables being used in the lower
 // scope function. THerefore these parent scope variables will be saved in the (MEMORY HEAP).
 // Which will then be used the loswe scope function named c in our case
 function a() {
@@ -28,7 +28,7 @@ console.log('result :>> ', result);
 // ----------------------------------------------------------------------------------------
 
 // IMP -> Below example demonstrates that myName const variable will be accesible by the
-// setTimeout callback therefore JS engine will identity this as a closure and thus maintain the lexical
+// setTimeout before its init callback therefore JS engine will identity this as a closure and thus maintain the lexical
 // scope (enviroment) variables
 function hoistingClosure() {
     setTimeout(() => {
