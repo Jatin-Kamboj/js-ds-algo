@@ -10,7 +10,8 @@ const lizard = {
     name: "Ramu lizard"
 }
 
-dragon.sing.call(lizard)
+// IGNORE : This is the part of curring
+// dragon.sing.call(lizard)
 
 // Resusing the function
 // We borrowed the sing method from dragon for lizard to print the name
