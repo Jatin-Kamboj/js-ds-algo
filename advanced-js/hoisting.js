@@ -5,7 +5,7 @@ console.log('myName :>> ', myName);
 
 var myName = "Jatin Kamboj"
 ``
-// This will invoke the function and print the value considering the function 
+// This will invoke the function and print the valuex considering the function 
 // is defined after the invocation of the function
 printMyName("Rahul triwedi")
 
