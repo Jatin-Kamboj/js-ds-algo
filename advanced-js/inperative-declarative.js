@@ -8,4 +8,8 @@
 // Such as forEach loop to iterate over all the elements in an array but not telling the
 // program how to do it.
 // It is the written under the hood in the interperator telling the program how to iterate
- 
+
+
+// Such as React is decalartive
+// We tell it what to do such as render a text in a component but not telling how to to it
+// It is pre defined under the hood in the virtual DOM
