@@ -1,0 +1,3 @@
+Strings are a array of characters.
+  So, All the operations in a string will be same as compared to an array such as O(n) on the array will be same in case of the strings.
+
