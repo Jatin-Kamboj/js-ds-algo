@@ -1,0 +1,63 @@
+
+What is javascript and is it a multi threaded language 
+
+Type Coercion:
+
+What is type coercion in JavaScript? Can you give an example of implicit and explicit type conversion?
+
+Closures:
+
+What is a closure in JavaScript, and why is it useful? Can you provide a practical example?
+
+Event Loop & Concurrency:
+
+How does the event loop work in JavaScript? Can you explain the difference between synchronous and asynchronous code execution?
+
+What is difference between function and arrow function? 
+How does this work in these ?
+
+
+
+this Keyword:
+
+How does the this keyword work in JavaScript? How is it determined in different contexts, such as in a method, event handler, or standalone function?
+
+
+Higher-Order Functions:
+
+What is a higher-order function in JavaScript? Can you give an example of how you’ve used one?
+
+Debouncing and Throttling:
+
+What is the difference between debouncing and throttling? How would you implement each in JavaScript?
+
+Can you write a simple debounce function that ensures a function is called only once every 300 milliseconds, regardless of how many times the event is triggered?
+
+call, apply, and bind:
+
+What is the difference between call, apply, and bind? How and when would you use each?
+
+
+Currying:
+
+What is currying in JavaScript, and why is it useful? Can you provide an example of a curried function?
+
+
+Object.freeze() and Object.seal():
+
+What is the difference between Object.freeze() and Object.seal()? When should you use each?
+
+
+Scope and Hoisting:
+
+What is the difference between function scope and block scope?
+How does hoisting work in JavaScript? Which declarations are hoisted and which are not?
+
+
+
+Optimizing Performance:
+
+When you mention optimizing performance in your resume, what specific strategies did you use to make your Angular dashboard more efficient?
+
+
+What is and how you handle lazy loading

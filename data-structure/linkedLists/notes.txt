@@ -1,0 +1,22 @@
+Linked list is a data structure to store data in it
+It is of 2 types
+  a. Singly Linked lists
+  b. Doubly Linked lists
+
+Status Arrays , We have specifc amount of data which we can use to store the data
+
+Insert and delete is O(n) because indexes change dusring inserting deletion etc
+
+HAshes are not ordered
+
+  To solve the above issues we are gonna use the linked lists
+
+We use pointers in linked lists to manage the refrence of next nodes
+
+Head (first node)
+Tail (last node)
+  Null terminated
+  A node which doesnot have refrence to next node is end of linked list
+Node
+  value
+  pointer(refernce to next node)
