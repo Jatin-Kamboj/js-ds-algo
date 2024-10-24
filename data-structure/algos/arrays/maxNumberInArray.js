@@ -1,7 +1,7 @@
 function maxNumberInArray(numbers) {
   // if (!numbers || !Array.isArray(numbers)) return;
 
-  // This is importamt intialise the vaeiable with first value in an array
+  // This is important to intialise the variable with first value in an array
   let maxNumber = numbers[0];
   // O(n)
 
