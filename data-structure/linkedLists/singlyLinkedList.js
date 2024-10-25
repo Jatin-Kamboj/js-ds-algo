@@ -57,6 +57,21 @@ class SinglyLinkedList {
     this.length++;
   }
 
+  traverseToIndex(index) {
+    let counter = 0;
+    let currentNode = this.head;
+    // while (currentNode.next !== null) {
+    while (counter !== index) {
+      // if (index === counter) {
+        // return currentNode;
+      // }
+      currentNode = currentNode.next;
+      counter++;
+    }
+
+    return currentNode;
+  }
+
   /**
    *
    */
@@ -73,31 +88,36 @@ class SinglyLinkedList {
     };
 
     if (index === 0) {
-      newNode.next = this.head;
-
-      // this.head.value = newNode
-      this.head = newNode;
+      this.prepend(value);
       return this.values();
     }
 
-    let currentIndex = 0;
-    let currentNode = this.head;
-    let lastNode = this.tail;
+    // let currentIndex = 0;
+    // let currentNode = this.head;
 
+    /**
+     * This is the better way to insert a new item at an index
+     * Other nodes will be moved accordingly
+     */
+    const leaderNode = this.traverseToIndex(index - 1);
+    const currentNode = this.traverseToIndex(index);
+    newNode.next = currentNode;
+    leaderNode.next = newNode;
+
+    this.#incrementLength()
+    
     // Finding existing node at the index
-    while (currentNode.next) {
-      if (currentIndex === index) {
-        newNode.next = currentNode;
-        lastNode.next = newNode;
+    // while (currentNode.next) {
+    //   if (currentIndex === index) {
+    //     newNode.next = currentNode;
+    //     leaderNode.next = newNode;
 
-        break;
-      }
+    //     break;
+    //   }
 
-      lastNode = currentNode;
-      currentNode = currentNode.next;
-
-      currentIndex++;
-    }
+    //   currentNode = currentNode.next;
+    //   currentIndex++;
+    // }
 
     return this.values();
   }
@@ -107,8 +127,8 @@ const linkedList = new SinglyLinkedList(10);
 linkedList.add(5);
 linkedList.add(16);
 linkedList.prepend(100);
-linkedList.values();
-linkedList.insert(0, 1000);
+// linkedList.values();
+// linkedList.insert(0, 1000);
 linkedList.insert(1, 200);
 linkedList.insert(2, 300);
 
