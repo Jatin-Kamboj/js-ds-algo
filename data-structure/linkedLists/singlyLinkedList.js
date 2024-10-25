@@ -34,6 +34,10 @@ class SinglyLinkedList {
     this.#incrementLength();
   }
 
+  printValues() {
+    console.log(this.values());
+  }
+
   values() {
     const data = [];
     let node = this.head;
@@ -43,7 +47,7 @@ class SinglyLinkedList {
       node = node.next;
       data.push(node.value);
     }
-    console.log("data :>> ", data);
+    // console.log("data :>> ", data);
     return data;
   }
 
@@ -63,7 +67,7 @@ class SinglyLinkedList {
     // while (currentNode.next !== null) {
     while (counter !== index) {
       // if (index === counter) {
-        // return currentNode;
+      // return currentNode;
       // }
       currentNode = currentNode.next;
       counter++;
@@ -104,8 +108,8 @@ class SinglyLinkedList {
     newNode.next = currentNode;
     leaderNode.next = newNode;
 
-    this.#incrementLength()
-    
+    this.#incrementLength();
+
     // Finding existing node at the index
     // while (currentNode.next) {
     //   if (currentIndex === index) {
@@ -121,6 +125,15 @@ class SinglyLinkedList {
 
     return this.values();
   }
+
+  remove(index) {
+    // 1
+    const leaderNode = this.traverseToIndex(index - 1);
+    // 3
+    const removalNode = this.traverseToIndex(index);
+    // 2
+    leaderNode.next = removalNode.next;
+  }
 }
 
 const linkedList = new SinglyLinkedList(10);
@@ -129,8 +142,13 @@ linkedList.add(16);
 linkedList.prepend(100);
 // linkedList.values();
 // linkedList.insert(0, 1000);
-linkedList.insert(1, 200);
-linkedList.insert(2, 300);
+// linkedList.insert(1, 200);
+// linkedList.insert(2, 300);
+
+// Remove a node
+linkedList.printValues()
+linkedList.remove(1);
+linkedList.printValues()
 
 // console.log("Length => ", linkedList.length);
 // console.log("linkedList :>> ", linkedList.length);
