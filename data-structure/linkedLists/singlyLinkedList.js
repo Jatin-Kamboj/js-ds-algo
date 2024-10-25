@@ -18,7 +18,7 @@ class SinglyLinkedList {
   }
 
   add(value) {
-    console.log("this.tail :>> ", this.tail);
+    // console.log("this.tail :>> ", this.tail);
     const newNode = {
       value,
       next: null,
@@ -39,10 +39,10 @@ class SinglyLinkedList {
     let node = this.head;
 
     if (node.value) data.push(node.value);
-    do {
+    while (node.next !== null) {
       node = node.next;
       data.push(node.value);
-    } while (node.next);
+    }
     console.log("data :>> ", data);
     return data;
   }
@@ -54,6 +54,52 @@ class SinglyLinkedList {
     };
 
     this.head = newNode;
+    this.length++;
+  }
+
+  /**
+   *
+   */
+  insert(index, value) {
+    // 10, 1
+    // find current elememt at index
+    // Create a new node
+    // change the pointer at that place
+
+    // THis is a new node
+    const newNode = {
+      value,
+      next: null,
+    };
+
+    if (index === 0) {
+      newNode.next = this.head;
+
+      // this.head.value = newNode
+      this.head = newNode;
+      return this.values();
+    }
+
+    let currentIndex = 0;
+    let currentNode = this.head;
+    let lastNode = this.tail;
+
+    // Finding existing node at the index
+    while (currentNode.next) {
+      if (currentIndex === index) {
+        newNode.next = currentNode;
+        lastNode.next = newNode;
+
+        break;
+      }
+
+      lastNode = currentNode;
+      currentNode = currentNode.next;
+
+      currentIndex++;
+    }
+
+    return this.values();
   }
 }
 
@@ -62,6 +108,9 @@ linkedList.add(5);
 linkedList.add(16);
 linkedList.prepend(100);
 linkedList.values();
+linkedList.insert(0, 1000);
+linkedList.insert(1, 200);
+linkedList.insert(2, 300);
 
-console.log("Length => ", linkedList.length);
-console.log("linkedList.head :>> ", linkedList.tail);
+// console.log("Length => ", linkedList.length);
+// console.log("linkedList :>> ", linkedList.length);
