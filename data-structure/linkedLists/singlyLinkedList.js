@@ -133,6 +133,9 @@ class SinglyLinkedList {
     const removalNode = this.traverseToIndex(index);
     // 2
     leaderNode.next = removalNode.next;
+    this.length--
+
+    return this.values()
   }
 }
 
@@ -152,3 +155,13 @@ linkedList.printValues()
 
 // console.log("Length => ", linkedList.length);
 // console.log("linkedList :>> ", linkedList.length);
+
+/**
+|--------------------------------------------------
+| Some Tips
+| During insertion or deletion
+| DLEETION -> Main focus is the leader node which contains the pointer of node which is to be removed
+| INSERTION -> Two nodes come to play here which are Leader node which have reference to the 
+|              Node to be deleted, New node which will be inserted and its pointer will be stored in the leader node
+|--------------------------------------------------
+*/  

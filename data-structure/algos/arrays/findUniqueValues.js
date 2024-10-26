@@ -17,10 +17,15 @@
 const input = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
 
 // Correct solution 
-// We are swapping the indexes values with unique values and Storing the last index
+// INPUT is sorted array
+// We are swapping the index values with unique values and Storing the last index
 // Which will act as a count of total unique elemets
-// The beneifit of this approach is not creating a new array in the memory 
-// Using the existing one to return the count of totoa unique elements 
+// The benefit of this approach is not creating a new array in the memory 
+// Using the existing one to return the count of total unique elements 
+// PROBLEM -> Main requirement over here was to not create a new space in the memory
+// rather use the existing space of the main array
+
+// This solution is called Two-Pointer Technique with Arrays
 function findUniqueValues(numbers) {
   if (!numbers || !Array.isArray(numbers)) return;
   const uniqueValues = [];
