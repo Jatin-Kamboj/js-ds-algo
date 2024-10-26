@@ -70,6 +70,7 @@ class DoublyLinkedList {
       next: this.head,
     };
 
+    this.head.prev = newNode
     this.head = newNode;
     this.length++;
   }
@@ -126,7 +127,7 @@ const linkedList = new DoublyLinkedList(10);
 linkedList.add(5);
 linkedList.add(16);
 
-// linkedList.prepend(100);
+linkedList.prepend(100);
 // linkedList.values();
 linkedList.insert(1, 1000);
 // linkedList.insert(1, 200);
