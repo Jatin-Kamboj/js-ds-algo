@@ -41,13 +41,18 @@ class SinglyLinkedList {
   values() {
     const data = [];
     let node = this.head;
+    // console.log('node :>> ', node);
 
-    if (node.value) data.push(node.value);
-    while (node.next !== null) {
-      node = node.next;
+    while (node !== null) {
+      // if (node?.value) {
+      // break;
+      // }
+      console.log("node.value :>> ", node.value);
       data.push(node.value);
+      node = node?.next;
     }
-    // console.log("data :>> ", data);
+    console.log("node :>> ", node);
+
     return data;
   }
 
@@ -133,9 +138,17 @@ class SinglyLinkedList {
     const removalNode = this.traverseToIndex(index);
     // 2
     leaderNode.next = removalNode.next;
-    this.length--
+    this.length--;
 
-    return this.values()
+    return this.values();
+  }
+
+  // Reverse a linked list
+  reverse() {
+    if (!this.head) return this.values();
+    
+
+    return this;
   }
 }
 
@@ -149,9 +162,17 @@ linkedList.prepend(100);
 // linkedList.insert(2, 300);
 
 // Remove a node
-linkedList.printValues()
-linkedList.remove(1);
-linkedList.printValues()
+// linkedList.printValues();
+// linkedList.remove(1);
+// linkedList.printValues();
+
+// After reversing
+linkedList.printValues();
+linkedList.reverse();
+linkedList.printValues();
+
+// const reversed = linkedList.reverse();
+// console.log(reversed);
 
 // console.log("Length => ", linkedList.length);
 // console.log("linkedList :>> ", linkedList.length);
@@ -164,4 +185,4 @@ linkedList.printValues()
 | INSERTION -> Two nodes come to play here which are Leader node which have reference to the 
 |              Node to be deleted, New node which will be inserted and its pointer will be stored in the leader node
 |--------------------------------------------------
-*/  
+*/

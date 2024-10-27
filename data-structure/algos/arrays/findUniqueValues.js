@@ -28,7 +28,6 @@ const input = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
 // This solution is called Two-Pointer Technique with Arrays
 function findUniqueValues(numbers) {
   if (!numbers || !Array.isArray(numbers)) return;
-  const uniqueValues = [];
   let j = 0;
 
   for (let i = 1; i <= numbers.length; i++) {

@@ -70,9 +70,10 @@ class DoublyLinkedList {
       next: this.head,
     };
 
-    this.head.prev = newNode
+    this.head.prev = newNode;
     this.head = newNode;
     this.length++;
+    return this;
   }
 
   traverseToIndex(index) {
@@ -96,7 +97,7 @@ class DoublyLinkedList {
 
     if (index === 0) {
       this.prepend(value);
-      return this.values();
+      return this;
     }
 
     const currentNode = this.traverseToIndex(index);
@@ -108,7 +109,7 @@ class DoublyLinkedList {
 
     this.#incrementLength();
 
-    return this.values();
+    return this;
   }
 
   remove(index) {
@@ -119,7 +120,7 @@ class DoublyLinkedList {
     leaderNode.next = removalNode.next;
     this.length--;
 
-    return this.values();
+    return removalNode;
   }
 }
 
