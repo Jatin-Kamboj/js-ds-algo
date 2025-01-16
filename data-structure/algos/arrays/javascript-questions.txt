@@ -5,7 +5,7 @@ Type Coercion:
 
 What is type coercion in JavaScript? Can you give an example of implicit and explicit type conversion?
 
-Closures:
+Closures: 
 
 What is a closure in JavaScript, and why is it useful? Can you provide a practical example?
 
