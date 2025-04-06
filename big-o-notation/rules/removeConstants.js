@@ -4,9 +4,10 @@ function printHiAndSayHalfElements(input) {
   console.log("Hi");
 
   let index = 0;
-  const middleIndex = Math.floor(input.length / 2);
+  const middleIndex = Math.floor(input.length / 2); // O(1)
 
   while (index <= middleIndex) {
+    //O(1)
     index++;
     console.log("item :>> ", index);
   }
