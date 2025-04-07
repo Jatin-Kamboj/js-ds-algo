@@ -29,7 +29,7 @@ class Stack {
     return this.top;
   }
 
-  // Add new element at the last place DONE
+  // A new element is added at the TOP first position
   push(value) {
     /**
      * Optional: Validate the value
@@ -47,8 +47,8 @@ class Stack {
       this.top = newNode;
       this.bottom = this.top;
     } else {
-      this.bottom.next = newNode;
-      this.bottom = newNode;
+      this.top.next = newNode;
+      this.top = newNode;
     }
 
     this.length++;
@@ -118,6 +118,8 @@ myStack.push("Kumar");
 
 const firstElement = myStack.peek();
 // console.log("firstElement :>> ", firstElement);
+
+console.log("myStack :>> ", myStack);
 
 // Kamboj should be removed
 const removedNode = myStack.pop();
