@@ -1,3 +1,13 @@
+/**
+ * What is linked list
+ * It is a collection of nodes
+ * Each node consist of 2 properties such as value and next (reference to the next node)
+ *
+ * There are 2 types of linked lists
+ * Singly Linked list
+ * Doubly Linked List
+ */
+
 class SinglyLinkedList {
   tail = null;
   head = null;
@@ -56,6 +66,7 @@ class SinglyLinkedList {
   }
 
   traverseToIndex(index) {
+    // Current node index
     let counter = 0;
     let currentNode = this.head;
 
@@ -69,7 +80,7 @@ class SinglyLinkedList {
 
   insert(index, value) {
     // 10, 1
-    // find current elememt at index
+    // find current element at index
     // Create a new node
     // change the pointer at that place
 
@@ -91,6 +102,10 @@ class SinglyLinkedList {
      * This is the better way to insert a new item at an index
      * Other nodes will be moved accordingly
      */
+
+    // 2 - 1 = 1 Leader one
+    // 2 Current Node
+    //
     const leaderNode = this.traverseToIndex(index - 1);
     const currentNode = this.traverseToIndex(index);
     newNode.next = currentNode;
@@ -115,6 +130,7 @@ class SinglyLinkedList {
   }
 
   remove(index) {
+    // 2
     const leaderNode = this.traverseToIndex(index - 1);
 
     const removalNode = this.traverseToIndex(index);
@@ -125,6 +141,7 @@ class SinglyLinkedList {
     return this.values();
   }
 
+  // Implement this
   reverse() {
     if (!this.head) return this.values();
 
