@@ -3,6 +3,8 @@
 // Input: "abcabcbb"
 // Output: 3 (Substring: "abc")
 
+// Recomendations The sliding window technique
+
 function longestSubstringWithoutRepeatingCharacters(input) {
   if (!input) return;
   console.log("input :>> ", input);
@@ -27,14 +29,15 @@ function longestSubstringWithoutRepeatingCharacters(input) {
     console.log("char :>> ", char);
     if (
       repeatingCharacter.has(char) &&
-      repeatingCharacter.size > longestSubstring.length
+      currentSubString.length > longestSubstring.length
     ) {
-      longestSubstring = [...repeatingCharacter.values()].join("");
-      console.log('longestSubstring :>> ', longestSubstring);
-      repeatingCharacter.clear()
+      longestSubstring = currentSubString;
+      console.log("longestSubstring :>> ", longestSubstring);
+      repeatingCharacter.clear();
+      currentSubString = "";
     } else {
       repeatingCharacter.add(char);
-      // currentSubString
+      currentSubString += char;
     }
   }
 }
