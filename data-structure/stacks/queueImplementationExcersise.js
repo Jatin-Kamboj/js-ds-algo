@@ -48,7 +48,7 @@ class Queue {
 
   // Remove the first from the QUEUE
   dequeue() {
-    if (!this.first) return;
+    if (!this.first) return null;
 
     /**
      * Plan
@@ -57,6 +57,7 @@ class Queue {
 
     if (this.length == 1) {
       this.first = null;
+      this.last = null;
     } else {
       this.first = this.first.next;
     }
