@@ -84,6 +84,26 @@ class BinaryTree {
       }
     }
   }
+
+  lookup(value) {
+    if (!this.root) return false;
+
+    let currentNode = this.root;
+
+    // Iterate over all the nodes
+    // Check if value < currentNode.value
+    // currentNode = currentNode.left
+
+    while (currentNode) {
+      if (value < currentNode.value) {
+        currentNode = currentNode.left;
+      } else if (value > currentNode.value) {
+        currentNode = currentNode.right;
+      } else if (value === currentNode.value) {
+        return currentNode;
+      }
+    }
+  }
 }
 
 const family = new BinaryTree();
@@ -95,4 +115,6 @@ family.insert(22);
 family.insert(40);
 family.insert(50);
 
+const result = family.lookup(20);
+console.log("result :>> ", result);
 console.log("family :>> ", family);
